@@ -10,10 +10,12 @@ namespace DoorShop
         DoorColor doorColor { get; set; }
         FrameColor frameColor { get; set; }
         FireproofLevel fireproofLevel { get; set; }
-
-        float Height { get; set; }
-        float Width { get; set; }
+        AccesoriesColor accesoriesColor { get; set; }
+        bool antiSmoke { get; set; }
+        float height { get; set; }
+        float width { get; set; }
         float price { get; set; }
+        int quantity { get; set; }
 
         
         
@@ -48,4 +50,9 @@ enum FrameColor
     Crimson = 4,
     NavyBlue = 5,
     Gray = 6
+}
+enum AccesoriesColor
+{
+    Silver = 1,
+    Bronze = 2
 }

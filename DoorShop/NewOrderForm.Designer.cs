@@ -41,7 +41,7 @@ namespace DoorShop
             this.AccesoriesColorListBox = new System.Windows.Forms.ListBox();
             this.FireproofLevelListbox = new System.Windows.Forms.ListBox();
             this.AntiSmokeListBox = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddToCartButton = new System.Windows.Forms.Button();
             this.HeightLabel = new System.Windows.Forms.Label();
             this.HeightTextbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,6 +50,13 @@ namespace DoorShop
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.PriceTextbox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BackToStartButton = new System.Windows.Forms.Button();
+            this.ClearCartButton = new System.Windows.Forms.Button();
+            this.FinishAndBuyButton = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +67,6 @@ namespace DoorShop
             this.label1.Size = new System.Drawing.Size(66, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Door Type :";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -161,28 +167,27 @@ namespace DoorShop
             this.AntiSmokeListBox.Size = new System.Drawing.Size(120, 19);
             this.AntiSmokeListBox.TabIndex = 11;
             // 
-            // button1
+            // AddToCartButton
             // 
-            this.button1.Location = new System.Drawing.Point(696, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 44);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Add To Order";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddToCartButton.Location = new System.Drawing.Point(696, 46);
+            this.AddToCartButton.Name = "AddToCartButton";
+            this.AddToCartButton.Size = new System.Drawing.Size(92, 44);
+            this.AddToCartButton.TabIndex = 12;
+            this.AddToCartButton.Text = "Add To Cart";
+            this.AddToCartButton.UseVisualStyleBackColor = true;
             // 
             // HeightLabel
             // 
             this.HeightLabel.AutoSize = true;
-            this.HeightLabel.Location = new System.Drawing.Point(81, 111);
+            this.HeightLabel.Location = new System.Drawing.Point(23, 115);
             this.HeightLabel.Name = "HeightLabel";
             this.HeightLabel.Size = new System.Drawing.Size(49, 15);
             this.HeightLabel.TabIndex = 13;
             this.HeightLabel.Text = "Height :";
-            this.HeightLabel.Click += new System.EventHandler(this.HeightLabel_Click);
             // 
             // HeightTextbox
             // 
-            this.HeightTextbox.Location = new System.Drawing.Point(133, 108);
+            this.HeightTextbox.Location = new System.Drawing.Point(78, 108);
             this.HeightTextbox.Name = "HeightTextbox";
             this.HeightTextbox.Size = new System.Drawing.Size(120, 23);
             this.HeightTextbox.TabIndex = 14;
@@ -190,7 +195,7 @@ namespace DoorShop
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(305, 115);
+            this.label7.Location = new System.Drawing.Point(208, 115);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 15);
             this.label7.TabIndex = 15;
@@ -198,11 +203,10 @@ namespace DoorShop
             // 
             // WidthTextbox
             // 
-            this.WidthTextbox.Location = new System.Drawing.Point(353, 108);
+            this.WidthTextbox.Location = new System.Drawing.Point(259, 108);
             this.WidthTextbox.Name = "WidthTextbox";
             this.WidthTextbox.Size = new System.Drawing.Size(120, 23);
             this.WidthTextbox.TabIndex = 16;
-            this.WidthTextbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // ClearBoxesButton
             // 
@@ -215,6 +219,10 @@ namespace DoorShop
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.FinishAndBuyButton);
+            this.groupBox1.Controls.Add(this.ClearCartButton);
+            this.groupBox1.Controls.Add(this.BackToStartButton);
             this.groupBox1.Location = new System.Drawing.Point(12, 155);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 283);
@@ -238,11 +246,66 @@ namespace DoorShop
             this.PriceTextbox.Size = new System.Drawing.Size(120, 23);
             this.PriceTextbox.TabIndex = 21;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(386, 114);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 15);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Quantity :";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(451, 108);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(64, 23);
+            this.textBox1.TabIndex = 23;
+            // 
+            // BackToStartButton
+            // 
+            this.BackToStartButton.Location = new System.Drawing.Point(668, 39);
+            this.BackToStartButton.Name = "BackToStartButton";
+            this.BackToStartButton.Size = new System.Drawing.Size(91, 47);
+            this.BackToStartButton.TabIndex = 0;
+            this.BackToStartButton.Text = "Back To Start Screen";
+            this.BackToStartButton.UseVisualStyleBackColor = true;
+            // 
+            // ClearCartButton
+            // 
+            this.ClearCartButton.Location = new System.Drawing.Point(668, 108);
+            this.ClearCartButton.Name = "ClearCartButton";
+            this.ClearCartButton.Size = new System.Drawing.Size(91, 46);
+            this.ClearCartButton.TabIndex = 1;
+            this.ClearCartButton.Text = "Clear Cart";
+            this.ClearCartButton.UseVisualStyleBackColor = true;
+            // 
+            // FinishAndBuyButton
+            // 
+            this.FinishAndBuyButton.Location = new System.Drawing.Point(668, 178);
+            this.FinishAndBuyButton.Name = "FinishAndBuyButton";
+            this.FinishAndBuyButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.FinishAndBuyButton.Size = new System.Drawing.Size(91, 82);
+            this.FinishAndBuyButton.TabIndex = 2;
+            this.FinishAndBuyButton.Text = "FINISH AND BUY";
+            this.FinishAndBuyButton.UseVisualStyleBackColor = true;
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(11, 39);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(651, 221);
+            this.listView1.TabIndex = 3;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // NewOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.PriceTextbox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
@@ -251,7 +314,7 @@ namespace DoorShop
             this.Controls.Add(this.label7);
             this.Controls.Add(this.HeightTextbox);
             this.Controls.Add(this.HeightLabel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AddToCartButton);
             this.Controls.Add(this.AntiSmokeListBox);
             this.Controls.Add(this.FireproofLevelListbox);
             this.Controls.Add(this.AccesoriesColorListBox);
@@ -266,7 +329,7 @@ namespace DoorShop
             this.Controls.Add(this.label1);
             this.Name = "NewOrderForm";
             this.Text = "NewOrderForm";
-            this.Load += new System.EventHandler(this.NewOrderForm_Load);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,7 +349,7 @@ namespace DoorShop
         private System.Windows.Forms.ListBox AccesoriesColorListBox;
         private System.Windows.Forms.ListBox FireproofLevelListbox;
         private System.Windows.Forms.ListBox AntiSmokeListBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddToCartButton;
         private System.Windows.Forms.Label HeightLabel;
         private System.Windows.Forms.TextBox HeightTextbox;
         private System.Windows.Forms.Label label7;
@@ -295,5 +358,11 @@ namespace DoorShop
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox PriceTextbox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button FinishAndBuyButton;
+        private System.Windows.Forms.Button ClearCartButton;
+        private System.Windows.Forms.Button BackToStartButton;
+        private System.Windows.Forms.ListView listView1;
     }
 }
