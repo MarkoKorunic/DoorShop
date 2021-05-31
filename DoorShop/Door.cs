@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DoorShop
 {
-    class Door
+    public class Door
     {
         DoorType doorType { get; set; }
         DoorColor doorColor { get; set; }
@@ -19,13 +19,13 @@ namespace DoorShop
         
     }
 }
-enum DoorType
+public enum DoorType
 {
     Alpha = 1,
     Beta = 2,
     Gamen = 3
 }
-enum DoorColor
+public enum DoorColor
 {
     White = 1,
     Black = 2,
@@ -34,7 +34,7 @@ enum DoorColor
     NavyBlue = 5,
     Gray = 6
 }
-enum FireproofLevel
+public enum FireproofLevel
 {
     m30 = 1,
     m60 = 2,

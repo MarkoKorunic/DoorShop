@@ -1,7 +1,7 @@
 ﻿
 namespace DoorShop
 {
-    partial class Form1
+    partial class StartScreenForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -53,6 +53,7 @@ namespace DoorShop
             this.NewOrderButton.TabIndex = 1;
             this.NewOrderButton.Text = "Make A New Order";
             this.NewOrderButton.UseVisualStyleBackColor = true;
+            this.NewOrderButton.Click += new System.EventHandler(this.NewOrderButton_Click);
             // 
             // LoadPreviousButton
             // 
@@ -64,7 +65,7 @@ namespace DoorShop
             this.LoadPreviousButton.Text = "Orders History";
             this.LoadPreviousButton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // StartScreenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -72,8 +73,8 @@ namespace DoorShop
             this.Controls.Add(this.LoadPreviousButton);
             this.Controls.Add(this.NewOrderButton);
             this.Controls.Add(this.TitleLabel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "StartScreenForm";
+            this.Text = "DoorShop";
             this.ResumeLayout(false);
 
         }
