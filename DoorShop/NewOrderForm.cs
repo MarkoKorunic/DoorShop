@@ -11,14 +11,16 @@ namespace DoorShop
 {
     public partial class NewOrderForm : Form
     {
-       
+        string errorMsgNmbr = "Please enter a number.";
+        
+
         public NewOrderForm()
         {
             InitializeComponent();
             Customer customer = new Customer();
             Door door = new Door();
             PopulateLists();
-
+            
 
         }
 
@@ -40,8 +42,27 @@ namespace DoorShop
 
 
         }
+        public void AddToCart (Door door,Customer customer)
+        {
+            door.doorType = (DoorType)Enum.Parse(typeof(DoorType), DoorTypeListBox.Text);
+            
+        }
+        
 
+        private void HeightTextbox_Validating(object sender, CancelEventArgs e)
+        {
+            var height = Convert.ToInt32(HeightTextbox.Text);
+            if (string.IsNullOrEmpty(HeightTextbox.Text))
+            {
+                e.Cancel = true;
+                HeightTextbox.Focus();
+                errorProvider1.SetError(HeightTextbox, errorMsgNmbr );
+            }
+        }
 
+        private void AddToCartButton_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

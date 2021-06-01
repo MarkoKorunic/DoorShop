@@ -183,6 +183,7 @@ namespace DoorShop
             this.AddToCartButton.TabIndex = 12;
             this.AddToCartButton.Text = "Add To Cart";
             this.AddToCartButton.UseVisualStyleBackColor = true;
+            this.AddToCartButton.Click += new System.EventHandler(this.AddToCartButton_Click);
             // 
             // HeightLabel
             // 
@@ -199,7 +200,8 @@ namespace DoorShop
             this.HeightTextbox.Name = "HeightTextbox";
             this.HeightTextbox.Size = new System.Drawing.Size(120, 23);
             this.HeightTextbox.TabIndex = 14;
-           
+            this.HeightTextbox.Validating += new System.ComponentModel.CancelEventHandler(this.HeightTextbox_Validating);
+            this.HeightTextbox.Validated += new System.EventHandler(this.AddToCartButton_Click);
             // 
             // label7
             // 

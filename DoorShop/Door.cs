@@ -6,19 +6,19 @@ namespace DoorShop
 {
     public class Door
     {
-        DoorType doorType { get; set; }
-        DoorColor doorColor { get; set; }
-        FrameColor frameColor { get; set; }
-        FireproofLevel fireproofLevel { get; set; }
-        AccesoriesColor accesoriesColor { get; set; }
-        Antismoke antismoke { get; set; }
-        float height { get; set; }
-        float width { get; set; }
-        float price { get; set; }
-        int quantity { get; set; }
+        public DoorType doorType { get; set; }
+        public DoorColor doorColor { get; set; }
+        public FrameColor frameColor { get; set; }
+        public FireproofLevel fireproofLevel { get; set; }
+        public AccesoriesColor accesoriesColor { get; set; }
+        public Antismoke antismoke { get; set; }
+        public float height { get; set; }
+        public float width { get; set; }
+        public float price { get; set; }
+        public int quantity { get; set; }
 
-        
-        
+
+       
     }
 }
 public enum DoorType
@@ -44,7 +44,7 @@ public enum FireproofLevel
     M60 = 2,
     M90 = 3
 }
-enum FrameColor
+public enum FrameColor
 {
     ChooseFromBelow = 0,
     White = 1,
@@ -54,14 +54,14 @@ enum FrameColor
     NavyBlue = 5,
     Gray = 6
 }
-enum AccesoriesColor
+public enum AccesoriesColor
 {
     ChooseFromBelow = 0,
     Silver = 1,
     Bronze = 2
 }
 
-enum Antismoke
+public enum Antismoke
 {
     ChooseFromBelow = 0,
     Yes = 1,
