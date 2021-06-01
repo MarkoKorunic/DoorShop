@@ -11,7 +11,7 @@ namespace DoorShop
         FrameColor frameColor { get; set; }
         FireproofLevel fireproofLevel { get; set; }
         AccesoriesColor accesoriesColor { get; set; }
-        bool antiSmoke { get; set; }
+        Antismoke antismoke { get; set; }
         float height { get; set; }
         float width { get; set; }
         float price { get; set; }
@@ -25,10 +25,11 @@ public enum DoorType
 {
     Alpha = 1,
     Beta = 2,
-    Gamen = 3
+    Magen = 3
 }
 public enum DoorColor
 {
+    ChooseFromBelow = 0,
     White = 1,
     Black = 2,
     Brown = 3,
@@ -38,12 +39,14 @@ public enum DoorColor
 }
 public enum FireproofLevel
 {
+    ChooseFromBelow = 0,
     M30 = 1,
     M60 = 2,
     M90 = 3
 }
 enum FrameColor
 {
+    ChooseFromBelow = 0,
     White = 1,
     Black = 2,
     Brown = 3,
@@ -53,6 +56,14 @@ enum FrameColor
 }
 enum AccesoriesColor
 {
+    ChooseFromBelow = 0,
     Silver = 1,
     Bronze = 2
+}
+
+enum Antismoke
+{
+    ChooseFromBelow = 0,
+    Yes = 1,
+    No = 2
 }

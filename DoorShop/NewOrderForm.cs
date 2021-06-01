@@ -36,9 +36,12 @@ namespace DoorShop
             FrameColorListBox.DataSource = Enum.GetValues(typeof(FrameColor)).Cast<FrameColor>().ToList();
             AccesoriesColorListBox.DataSource = Enum.GetValues(typeof(AccesoriesColor)).Cast<AccesoriesColor>().ToList();
             FireproofLevelListbox.DataSource = Enum.GetValues(typeof(FireproofLevel)).Cast<FireproofLevel>().ToList();
-
+            AntiSmokeListBox.DataSource = Enum.GetValues(typeof(Antismoke)).Cast<Antismoke>().ToList();
 
 
         }
+
+
+
     }
 }

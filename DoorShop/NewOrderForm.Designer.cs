@@ -29,6 +29,7 @@ namespace DoorShop
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,6 +49,8 @@ namespace DoorShop
             this.WidthTextbox = new System.Windows.Forms.TextBox();
             this.ClearBoxesButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.FinishAndBuyButton = new System.Windows.Forms.Button();
             this.ClearCartButton = new System.Windows.Forms.Button();
@@ -56,7 +59,9 @@ namespace DoorShop
             this.PriceTextbox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -194,6 +199,7 @@ namespace DoorShop
             this.HeightTextbox.Name = "HeightTextbox";
             this.HeightTextbox.Size = new System.Drawing.Size(120, 23);
             this.HeightTextbox.TabIndex = 14;
+           
             // 
             // label7
             // 
@@ -222,6 +228,8 @@ namespace DoorShop
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.listView1);
             this.groupBox1.Controls.Add(this.FinishAndBuyButton);
             this.groupBox1.Controls.Add(this.ClearCartButton);
@@ -231,14 +239,30 @@ namespace DoorShop
             this.groupBox1.Size = new System.Drawing.Size(776, 283);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Your Order";
+            this.groupBox1.Text = "Your Cart";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(122, 52);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(199, 23);
+            this.textBox2.TabIndex = 5;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(16, 55);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 15);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Customer Name :";
             // 
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(11, 39);
+            this.listView1.Location = new System.Drawing.Point(11, 87);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(651, 221);
+            this.listView1.Size = new System.Drawing.Size(651, 173);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -303,6 +327,10 @@ namespace DoorShop
             this.textBox1.Size = new System.Drawing.Size(64, 23);
             this.textBox1.TabIndex = 23;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // NewOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -334,6 +362,8 @@ namespace DoorShop
             this.Name = "NewOrderForm";
             this.Text = "NewOrderForm";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,5 +398,8 @@ namespace DoorShop
         private System.Windows.Forms.Button ClearCartButton;
         private System.Windows.Forms.Button BackToStartButton;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
