@@ -48,14 +48,14 @@ namespace DoorShop
             this.WidthTextbox = new System.Windows.Forms.TextBox();
             this.ClearBoxesButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.FinishAndBuyButton = new System.Windows.Forms.Button();
+            this.ClearCartButton = new System.Windows.Forms.Button();
+            this.BackToStartButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.PriceTextbox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.BackToStartButton = new System.Windows.Forms.Button();
-            this.ClearCartButton = new System.Windows.Forms.Button();
-            this.FinishAndBuyButton = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,11 +115,14 @@ namespace DoorShop
             // 
             // DoorTypeListBox
             // 
+            this.DoorTypeListBox.AllowDrop = true;
             this.DoorTypeListBox.FormattingEnabled = true;
             this.DoorTypeListBox.ItemHeight = 15;
             this.DoorTypeListBox.Location = new System.Drawing.Point(133, 50);
             this.DoorTypeListBox.Name = "DoorTypeListBox";
+            this.DoorTypeListBox.ScrollAlwaysVisible = true;
             this.DoorTypeListBox.Size = new System.Drawing.Size(120, 19);
+            this.DoorTypeListBox.Sorted = true;
             this.DoorTypeListBox.TabIndex = 6;
             // 
             // FrameColorListBox
@@ -230,6 +233,44 @@ namespace DoorShop
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Your Order";
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(11, 39);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(651, 221);
+            this.listView1.TabIndex = 3;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // FinishAndBuyButton
+            // 
+            this.FinishAndBuyButton.Location = new System.Drawing.Point(668, 178);
+            this.FinishAndBuyButton.Name = "FinishAndBuyButton";
+            this.FinishAndBuyButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.FinishAndBuyButton.Size = new System.Drawing.Size(91, 82);
+            this.FinishAndBuyButton.TabIndex = 2;
+            this.FinishAndBuyButton.Text = "FINISH AND BUY";
+            this.FinishAndBuyButton.UseVisualStyleBackColor = true;
+            // 
+            // ClearCartButton
+            // 
+            this.ClearCartButton.Location = new System.Drawing.Point(668, 108);
+            this.ClearCartButton.Name = "ClearCartButton";
+            this.ClearCartButton.Size = new System.Drawing.Size(91, 46);
+            this.ClearCartButton.TabIndex = 1;
+            this.ClearCartButton.Text = "Clear Cart";
+            this.ClearCartButton.UseVisualStyleBackColor = true;
+            // 
+            // BackToStartButton
+            // 
+            this.BackToStartButton.Location = new System.Drawing.Point(668, 39);
+            this.BackToStartButton.Name = "BackToStartButton";
+            this.BackToStartButton.Size = new System.Drawing.Size(91, 47);
+            this.BackToStartButton.TabIndex = 0;
+            this.BackToStartButton.Text = "Back To Start Screen";
+            this.BackToStartButton.UseVisualStyleBackColor = true;
+            this.BackToStartButton.Click += new System.EventHandler(this.BackToStartButton_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -261,43 +302,6 @@ namespace DoorShop
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(64, 23);
             this.textBox1.TabIndex = 23;
-            // 
-            // BackToStartButton
-            // 
-            this.BackToStartButton.Location = new System.Drawing.Point(668, 39);
-            this.BackToStartButton.Name = "BackToStartButton";
-            this.BackToStartButton.Size = new System.Drawing.Size(91, 47);
-            this.BackToStartButton.TabIndex = 0;
-            this.BackToStartButton.Text = "Back To Start Screen";
-            this.BackToStartButton.UseVisualStyleBackColor = true;
-            // 
-            // ClearCartButton
-            // 
-            this.ClearCartButton.Location = new System.Drawing.Point(668, 108);
-            this.ClearCartButton.Name = "ClearCartButton";
-            this.ClearCartButton.Size = new System.Drawing.Size(91, 46);
-            this.ClearCartButton.TabIndex = 1;
-            this.ClearCartButton.Text = "Clear Cart";
-            this.ClearCartButton.UseVisualStyleBackColor = true;
-            // 
-            // FinishAndBuyButton
-            // 
-            this.FinishAndBuyButton.Location = new System.Drawing.Point(668, 178);
-            this.FinishAndBuyButton.Name = "FinishAndBuyButton";
-            this.FinishAndBuyButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.FinishAndBuyButton.Size = new System.Drawing.Size(91, 82);
-            this.FinishAndBuyButton.TabIndex = 2;
-            this.FinishAndBuyButton.Text = "FINISH AND BUY";
-            this.FinishAndBuyButton.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(11, 39);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(651, 221);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // NewOrderForm
             // 

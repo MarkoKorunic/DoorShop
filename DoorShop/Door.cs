@@ -38,9 +38,9 @@ public enum DoorColor
 }
 public enum FireproofLevel
 {
-    m30 = 1,
-    m60 = 2,
-    m90 = 3
+    M30 = 1,
+    M60 = 2,
+    M90 = 3
 }
 enum FrameColor
 {
