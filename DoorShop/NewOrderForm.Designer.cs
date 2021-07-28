@@ -49,9 +49,9 @@ namespace DoorShop
             this.WidthTextbox = new System.Windows.Forms.TextBox();
             this.ClearBoxesButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.customerTextbox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.CartListView = new System.Windows.Forms.ListView();
             this.FinishAndBuyButton = new System.Windows.Forms.Button();
             this.ClearCartButton = new System.Windows.Forms.Button();
             this.BackToStartButton = new System.Windows.Forms.Button();
@@ -230,9 +230,9 @@ namespace DoorShop
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.customerTextbox);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.CartListView);
             this.groupBox1.Controls.Add(this.FinishAndBuyButton);
             this.groupBox1.Controls.Add(this.ClearCartButton);
             this.groupBox1.Controls.Add(this.BackToStartButton);
@@ -243,12 +243,12 @@ namespace DoorShop
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Your Cart";
             // 
-            // textBox2
+            // customerTextbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 23);
-            this.textBox2.TabIndex = 5;
+            this.customerTextbox.Location = new System.Drawing.Point(122, 52);
+            this.customerTextbox.Name = "customerTextbox";
+            this.customerTextbox.Size = new System.Drawing.Size(199, 23);
+            this.customerTextbox.TabIndex = 5;
             // 
             // label10
             // 
@@ -259,14 +259,14 @@ namespace DoorShop
             this.label10.TabIndex = 4;
             this.label10.Text = "Customer Name :";
             // 
-            // listView1
+            // CartListView
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(11, 87);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(651, 173);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.CartListView.HideSelection = false;
+            this.CartListView.Location = new System.Drawing.Point(11, 87);
+            this.CartListView.Name = "CartListView";
+            this.CartListView.Size = new System.Drawing.Size(651, 173);
+            this.CartListView.TabIndex = 3;
+            this.CartListView.UseCompatibleStateImageBehavior = false;
             // 
             // FinishAndBuyButton
             // 
@@ -399,8 +399,8 @@ namespace DoorShop
         private System.Windows.Forms.Button FinishAndBuyButton;
         private System.Windows.Forms.Button ClearCartButton;
         private System.Windows.Forms.Button BackToStartButton;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ListView CartListView;
+        private System.Windows.Forms.TextBox customerTextbox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }

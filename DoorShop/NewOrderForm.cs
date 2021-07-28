@@ -12,6 +12,8 @@ namespace DoorShop
     public partial class NewOrderForm : Form
     {
         string errorMsgNmbr = "Please enter a number.";
+        public Door door { get; set; }
+        public Customer customer { get; set; }
         
 
         public NewOrderForm()
@@ -45,9 +47,18 @@ namespace DoorShop
         public void AddToCart (Door door,Customer customer)
         {
             door.doorType = (DoorType)Enum.Parse(typeof(DoorType), DoorTypeListBox.Text);
+            door.doorColor = (DoorColor)Enum.Parse(typeof(DoorColor), DoorColorListBox.Text);
+            door.frameColor = (FrameColor)Enum.Parse(typeof(FrameColor), FrameColorListBox.Text);
+            door.accesoriesColor = (AccesoriesColor)Enum.Parse(typeof(AccesoriesColor), AccesoriesColorListBox.Text);
+            door.fireproofLevel = (FireproofLevel)Enum.Parse(typeof(FireproofLevel), FireproofLevelListbox.Text);
+            door.antismoke = (Antismoke)Enum.Parse(typeof(Antismoke), AntiSmokeListBox.Text);
+
+            customer.customerName = customerTextbox.Text;
+            customer.doors.Add(door);
             
+
         }
-        
+
 
         private void HeightTextbox_Validating(object sender, CancelEventArgs e)
         {
@@ -62,7 +73,21 @@ namespace DoorShop
 
         private void AddToCartButton_Click(object sender, EventArgs e)
         {
+            AddToCart(door, customer);
+        }
+
+        public void PopulateCartListView()
+        {
+            CartListView.View = View.Details;
+            CartListView.Columns.Add("Door Type");
+            CartListView.Columns.Add("Door Color");
+            CartListView.Columns.Add("Height");
+            CartListView.Columns.Add("Width");
+            CartListView.Columns.Add("Quantity");
+            CartListView.Columns.Add("Price");
 
         }
     }
+
+   
 }

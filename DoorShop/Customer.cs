@@ -6,8 +6,8 @@ namespace DoorShop
 {
     public class Customer
     {
-        string customerName { get; set; }
-        List<Door> doors { get; set; }
+        public string customerName { get; set; }
+        public List<Door> doors { get; set; }
 
     }
 }
